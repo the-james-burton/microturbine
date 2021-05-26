@@ -1,3 +1,18 @@
+## turbine
+
+### develop
+
+1. install OpenJ9 from AdoptOpenJDK
+1. install SDKMAN!
+1. Use SDKMAN! to install gradle
+1. Use SDKMAN! to install micronaut cli
+1. TODO more stuff...
+
+### run locally
+
+./gradelw run
+
+
 ## Micronaut 2.5.4 Documentation
 
 - [User Guide](https://docs.micronaut.io/2.5.4/guide/index.html)
