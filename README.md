@@ -6,7 +6,22 @@
 1. install SDKMAN!
 1. Use SDKMAN! to install gradle
 1. Use SDKMAN! to install micronaut cli
-1. TODO more stuff...
+1. Install Kafka...
+```shell
+sudo apt install openjdk-11-jre
+# find your kafka mirror here: https://www.apache.org/dyn/closer.cgi?path=/kafka/2.8.0/kafka_2.13-2.8.0.tgz
+wget https://apache.mirrors.nublue.co.uk/kafka/2.8.0/kafka_2.13-2.8.0.tgz
+tar -xzf kafka_2.13-2.8.0.tgz
+sudo mv kafka_2.13-2.8.0 /usr/local/kafka
+rm kafka_2.13-2.8.0.tgz
+sudo cp zookeeper.service /etc/systemd/system/
+sudo cp kafka.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl start zookeeper
+sudo systemctl status zookeeper
+sudo systemctl start kafka
+sudo systemctl status kafka
+```
 
 ### run locally
 
