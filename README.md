@@ -21,6 +21,7 @@ sudo systemctl start zookeeper
 sudo systemctl status zookeeper
 sudo systemctl start kafka
 sudo systemctl status kafka
+echo PATH='"$PATH:/usr/local/kafka/bin"' >> ~/.profile
 ```
 
 ### run locally
