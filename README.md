@@ -25,6 +25,16 @@ sudo systemctl status kafka
 echo PATH='"$PATH:/usr/local/kafka/bin"' >> ~/.profile
 source ~/.profile
 ```
+1. Install Elasticsearch...
+```shell
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.13.0-linux-x86_64.tar.gz
+tar -xzf elasticsearch-7.13.0-linux-x86_64.tar.gz
+sudo mv elasticsearch-7.13.0 /usr/local/elasticsearch
+rm elasticsearch-7.13.0-linux-x86_64.tar.gz
+# TODO - systemd setup
+echo PATH='"$PATH:/usr/local/elasticsearch/bin"' >> ~/.profile
+source ~/.profile
+```
 
 ### run locally
 
