@@ -2,10 +2,11 @@
 
 ### develop
 
-1. install OpenJ9 from AdoptOpenJDK
+
 1. install SDKMAN!
-1. Use SDKMAN! to install gradle
-1. Use SDKMAN! to install micronaut cli
+1. Use SDKMAN! to install Gradle
+1. Use SDKMAN! to install Micronaut cli
+1. Use SDKMAN! to install GraalVM
 1. Install Kafka...
 ```shell
 sudo apt install openjdk-11-jre
@@ -22,6 +23,7 @@ sudo systemctl status zookeeper
 sudo systemctl start kafka
 sudo systemctl status kafka
 echo PATH='"$PATH:/usr/local/kafka/bin"' >> ~/.profile
+source ~/.profile
 ```
 
 ### run locally
