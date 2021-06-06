@@ -31,7 +31,16 @@ wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.13.0-l
 tar -xzf elasticsearch-7.13.0-linux-x86_64.tar.gz
 sudo mv elasticsearch-7.13.0 /usr/local/elasticsearch
 rm elasticsearch-7.13.0-linux-x86_64.tar.gz
-# TODO - systemd setup
+sudo groupadd elasticsearch
+sudo usermod -a -G elasticsearch $USER
+sudo useradd -g elasticsearch elasticsearch
+sudo chown -hR elasticsearch:elasticsearch /usr/local/elasticsearch
+sudo chmod -R 775 /usr/local/elasticsearch/
+sudo cp elasticsearch.service /etc/systemd/system/
+sudo systemctl daemon-reload
+# TODO stop systemctl timeout...
+sudo systemctl start elasticsearch
+sudo systemctl status elasticsearch
 echo PATH='"$PATH:/usr/local/elasticsearch/bin"' >> ~/.profile
 source ~/.profile
 ```
