@@ -1,0 +1,18 @@
+[Unit]
+Description=Kibana
+Documentation=https://www.elastic.co
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=30
+StartLimitBurst=3
+
+[Service]
+Type=simple
+Restart=on-abnormal
+ExecStart=/usr/local/kibana/bin/kibana "-c /usr/local/kibana/config/kibana.yml"
+WorkingDirectory=/usr/local/kibana
+User=kibana
+Group=kibana
+
+[Install]
+WantedBy=multi-user.target

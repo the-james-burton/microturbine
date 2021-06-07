@@ -44,6 +44,25 @@ sudo systemctl status elasticsearch
 echo PATH='"$PATH:/usr/local/elasticsearch/bin"' >> ~/.profile
 source ~/.profile
 ```
+7. Install Kibana...
+```shell
+curl -O https://artifacts.elastic.co/downloads/kibana/kibana-7.13.1-linux-x86_64.tar.gz
+curl https://artifacts.elastic.co/downloads/kibana/kibana-7.13.1-linux-x86_64.tar.gz.sha512 | shasum -a 512 -c -
+tar -xzf kibana-7.13.1-linux-x86_64.tar.gz
+sudo mv kibana-7.13.1-linux-x86_64 /usr/local/kibana
+rm kibana-7.13.1-linux-x86_64.tar.gz
+sudo groupadd kibana
+sudo usermod -a -G kibana $USER
+sudo useradd -g kibana kibana
+sudo chown -hR kibana:kibana /usr/local/kibana
+sudo chmod -R 775 /usr/local/kibana/
+sudo cp kibana.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl start kibana
+sudo systemctl status kibana
+echo PATH='"$PATH:/usr/local/kibana/bin"' >> ~/.profile
+source ~/.profile
+```
 
 ### run locally
 
