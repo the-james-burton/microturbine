@@ -1,3 +1,5 @@
+# https://github.com/elastic/elasticsearch/blob/master/distribution/packages/src/common/systemd/elasticsearch.service
+
 [Unit]
 Description=Elasticsearch
 Documentation=https://www.elastic.co
@@ -5,7 +7,8 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-Type=notify
+# using notify type here causes the systemctl start command to hang and eventually timeout, so we use simple...
+Type=simple
 RuntimeDirectory=elasticsearch
 PrivateTmp=true
 Environment=ES_HOME=/usr/local/elasticsearch

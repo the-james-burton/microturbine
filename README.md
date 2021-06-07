@@ -25,7 +25,7 @@ sudo systemctl status kafka
 echo PATH='"$PATH:/usr/local/kafka/bin"' >> ~/.profile
 source ~/.profile
 ```
-1. Install Elasticsearch...
+6. Install Elasticsearch...
 ```shell
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.13.0-linux-x86_64.tar.gz
 tar -xzf elasticsearch-7.13.0-linux-x86_64.tar.gz
@@ -35,10 +35,10 @@ sudo groupadd elasticsearch
 sudo usermod -a -G elasticsearch $USER
 sudo useradd -g elasticsearch elasticsearch
 sudo chown -hR elasticsearch:elasticsearch /usr/local/elasticsearch
+sudo mkdir /usr/local/elasticsearch/run
 sudo chmod -R 775 /usr/local/elasticsearch/
 sudo cp elasticsearch.service /etc/systemd/system/
 sudo systemctl daemon-reload
-# TODO stop systemctl timeout...
 sudo systemctl start elasticsearch
 sudo systemctl status elasticsearch
 echo PATH='"$PATH:/usr/local/elasticsearch/bin"' >> ~/.profile
