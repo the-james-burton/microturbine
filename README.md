@@ -21,8 +21,10 @@ rm kafka_2.13-2.8.0.tgz
 sudo cp zookeeper.service /etc/systemd/system/
 sudo cp kafka.service /etc/systemd/system/
 sudo systemctl daemon-reload
+sudo systemctl enable zookeeper
 sudo systemctl start zookeeper
 sudo systemctl status zookeeper
+sudo systemctl enable kafka
 sudo systemctl start kafka
 sudo systemctl status kafka
 echo PATH='"$PATH:/usr/local/kafka/bin"' >> ~/.profile
@@ -43,6 +45,7 @@ sudo mkdir /usr/local/elasticsearch/run
 sudo chmod -R 775 /usr/local/elasticsearch/
 sudo cp elasticsearch.service /etc/systemd/system/
 sudo systemctl daemon-reload
+sudo systemctl enable elasticsearch
 sudo systemctl start elasticsearch
 sudo systemctl status elasticsearch
 echo PATH='"$PATH:/usr/local/elasticsearch/bin"' >> ~/.profile
@@ -62,6 +65,7 @@ sudo chown -hR kibana:kibana /usr/local/kibana
 sudo chmod -R 775 /usr/local/kibana/
 sudo cp kibana.service /etc/systemd/system/
 sudo systemctl daemon-reload
+sudo systemctl enable kibana
 sudo systemctl start kibana
 sudo systemctl status kibana
 echo PATH='"$PATH:/usr/local/kibana/bin"' >> ~/.profile
