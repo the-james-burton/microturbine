@@ -2,7 +2,6 @@
 
 ### develop
 
-
 1. install SDKMAN!
 1. Use SDKMAN! to install Gradle
 1. Use SDKMAN! to install Micronaut cli
@@ -11,7 +10,11 @@
 ```shell
 sudo apt install openjdk-11-jre
 # find your kafka mirror here: https://www.apache.org/dyn/closer.cgi?path=/kafka/2.8.0/kafka_2.13-2.8.0.tgz
-wget https://apache.mirrors.nublue.co.uk/kafka/2.8.0/kafka_2.13-2.8.0.tgz
+curl -O https://apache.mirrors.nublue.co.uk/kafka/2.8.0/kafka_2.13-2.8.0.tgz
+# sha512 checking does not work for kafka as the hash is not published in a compatible format, so just eyeball instead
+curl -O https://downloads.apache.org/kafka/2.8.0/kafka_2.12-2.8.0.tgz.sha512
+sha512sum kafka_2.13-2.8.0.tgz
+cat kafka_2.13-2.8.0.tgz.sha512
 tar -xzf kafka_2.13-2.8.0.tgz
 sudo mv kafka_2.13-2.8.0 /usr/local/kafka
 rm kafka_2.13-2.8.0.tgz
@@ -27,7 +30,8 @@ source ~/.profile
 ```
 6. Install Elasticsearch...
 ```shell
-wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.13.0-linux-x86_64.tar.gz
+curl -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.13.0-linux-x86_64.tar.gz
+curl https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.13.0-linux-x86_64.tar.gz.sha512 | shasum -a 512 -c -
 tar -xzf elasticsearch-7.13.0-linux-x86_64.tar.gz
 sudo mv elasticsearch-7.13.0 /usr/local/elasticsearch
 rm elasticsearch-7.13.0-linux-x86_64.tar.gz
