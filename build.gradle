@@ -2,6 +2,15 @@ plugins {
     id("com.github.johnrengelman.shadow") version "7.0.0"
     id("io.micronaut.application") version "1.5.0"
     id("com.google.cloud.tools.jib") version "2.8.0"
+    id("java")
+    id("idea")
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
 }
 
 version = "0.1"
@@ -40,7 +49,6 @@ dependencies {
 
 }
 
-
 application {
     mainClass.set("com.jimsey.projects.micro.Application")
 }
@@ -48,8 +56,6 @@ java {
     sourceCompatibility = JavaVersion.toVersion("16")
     targetCompatibility = JavaVersion.toVersion("16")
 }
-
-
 
 jib {
     to {
