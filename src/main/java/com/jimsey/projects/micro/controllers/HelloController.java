@@ -1,15 +1,17 @@
-package com.jimsey.projects.micro;
+package com.jimsey.projects.micro.controllers;
 
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Produces;
 
-@Controller("/hello") 
+@Controller("/hello")
 public class HelloController {
-    @Get 
-    @Produces(MediaType.TEXT_PLAIN) 
+
+    @Get
+    @Produces(MediaType.TEXT_PLAIN)
     public String index() {
-        return "Hello World"; 
+        return "Hello World";
     }
+
 }
