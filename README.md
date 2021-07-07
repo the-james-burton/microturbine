@@ -1,4 +1,5 @@
-## turbine
+## turbine [![Build Status](https://travis-ci.com/the-james-burton/microturbine.svg?branch=main)](https://travis-ci.com/github/the-james-burton/microturbine)
+
 
 ### develop
 
