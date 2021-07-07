@@ -11,8 +11,8 @@ import javax.inject.Singleton;
 public class ExampleFactory {
 
     @Singleton
-    @Named("example")
+    @Named("example-events")
     KStream<String, String> exampleStream(ConfiguredStreamBuilder builder) {
-        return builder.stream("streams-plaintext-input");
+        return builder.stream("example-events");
     }
 }
