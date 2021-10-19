@@ -1,6 +1,6 @@
 applicationType: default
-defaultPackage: com.jimsey.projects.micro
+defaultPackage: org.jimsey.projects
 testFramework: junit
 sourceLanguage: java
 buildTool: gradle
-features: [ annotation-api, app-name, assertj, elasticsearch, gradle, http-client, java, java-application, jib, junit, kafka, kafka-streams, kubernetes, log4j2, lombok, management, mockito, netty-server, readme, shade, yaml ]
+features: [annotation-api, app-name, assertj, elasticsearch, graalvm, gradle, http-client, java, java-application, junit, kafka, kafka-streams, log4j2, lombok, mockito, netty-server, openrewrite, reactor, reactor-http-client, readme, shade, yaml]

@@ -1,4 +1,4 @@
-package com.jimsey.projects.micro.kafka;
+package org.jimsey.projects.microturbine.kafka;
 
 import io.micronaut.configuration.kafka.annotation.KafkaKey;
 import io.micronaut.configuration.kafka.annotation.KafkaListener;

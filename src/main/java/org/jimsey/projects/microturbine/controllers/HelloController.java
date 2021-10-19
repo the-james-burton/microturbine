@@ -1,4 +1,4 @@
-package com.jimsey.projects.micro.controllers;
+package org.jimsey.projects.microturbine.controllers;
 
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;

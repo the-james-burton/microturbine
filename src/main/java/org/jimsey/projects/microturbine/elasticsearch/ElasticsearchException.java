@@ -1,4 +1,4 @@
-package com.jimsey.projects.micro.elasticsearch;
+package org.jimsey.projects.microturbine.elasticsearch;
 
 
 public class ElasticsearchException extends Exception {

@@ -1,11 +1,11 @@
-package com.jimsey.projects.micro;
+package org.jimsey.projects.microturbine;
 
 import io.micronaut.configuration.kafka.streams.ConfiguredStreamBuilder;
 import io.micronaut.context.annotation.Factory;
 import org.apache.kafka.streams.kstream.KStream;
 
-import javax.inject.Named;
-import javax.inject.Singleton;
+import jakarta.inject.Named;
+import jakarta.inject.Singleton;
 
 @Factory
 public class ExampleFactory {

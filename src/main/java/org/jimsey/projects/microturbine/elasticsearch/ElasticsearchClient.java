@@ -1,13 +1,12 @@
-package com.jimsey.projects.micro.elasticsearch;
+package org.jimsey.projects.microturbine.elasticsearch;
 
 import io.vavr.control.Try;
+import jakarta.inject.Inject;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.client.core.MainResponse;
-
-import javax.inject.Inject;
 
 public class ElasticsearchClient {
 

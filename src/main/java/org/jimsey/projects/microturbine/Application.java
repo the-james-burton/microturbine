@@ -1,4 +1,4 @@
-package com.jimsey.projects.micro;
+package org.jimsey.projects.microturbine;
 
 import io.micronaut.runtime.Micronaut;
 

@@ -1,13 +1,12 @@
-package com.jimsey.projects.micro.controllers;
+package org.jimsey.projects.microturbine.controllers;
 
-import com.jimsey.projects.micro.elasticsearch.ElasticsearchClient;
-import com.jimsey.projects.micro.elasticsearch.ElasticsearchException;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Produces;
-
-import javax.inject.Inject;
+import jakarta.inject.Inject;
+import org.jimsey.projects.microturbine.elasticsearch.ElasticsearchClient;
+import org.jimsey.projects.microturbine.elasticsearch.ElasticsearchException;
 
 @Controller("/elasticsearch")
 public class ElasticsearchController {

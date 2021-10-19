@@ -1,14 +1,14 @@
-package com.jimsey.projects.micro;
+package org.jimsey.projects;
 
 import io.micronaut.runtime.EmbeddedApplication;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 @MicronautTest
-class TurbineTest {
+class MicroturbineTest {
 
     @Inject
     EmbeddedApplication<?> application;
